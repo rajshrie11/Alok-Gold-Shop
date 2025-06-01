@@ -1,0 +1,18 @@
+.h-wrapper {
+  /* background: var(--black); */
+  color: white;
+}
+
+.banner {
+  background-color: #ff922d;
+  color: #eeeeff;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.footer-wrapper {
+  margin-top: 0rem;
+  position: relative;
+  overflow: hidden;
+  height: 40px;
+}

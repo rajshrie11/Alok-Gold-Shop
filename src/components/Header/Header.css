@@ -17,3 +17,68 @@
 .h-menu > *:hover {
   cursor: pointer;
 }
+
+/* Search bar */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 6px 30px 6px 10px; /* Right padding to make space for icon */
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  color: gray;
+  pointer-events: none; /* Allow clicks to pass through */
+  font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .location-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .search-input {
+    width: 140px;
+  }
+
+  .search-button {
+    padding: 6px 12px;
+  }
+}
+
+/* Footer marquee */
+.footer-wrapper {
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+  height: 40px;
+}
+
+.marquee {
+  position: absolute;
+  white-space: nowrap;
+  animation: scroll-left 20s linear infinite;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1rem;
+  color: #eeeeff;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
