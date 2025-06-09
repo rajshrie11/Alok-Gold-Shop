@@ -1,5 +1,6 @@
 import React from "react";
 import "./Populer.css";
+import Footer from "../Footer/Footer";
 
 const Populer = () => {
   return (
@@ -7,6 +8,8 @@ const Populer = () => {
       <div className="flexCenter banner v-right">
         <span className="">Products</span>
       </div>
+      <Footer />
+
       <div className="paddings innerWidth flexCenter c-container">
         <img src="./.jpeg" alt="Product1" />
         <img src="./.jpeg" alt="Product2" />

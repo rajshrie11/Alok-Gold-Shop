@@ -76,6 +76,7 @@ function App() {
       <div ref={populerRef}>
         <Populer searchTerm={searchTerm} />
       </div>
+
       <div ref={valueRef}>
         <Value searchTerm={searchTerm} />
       </div>

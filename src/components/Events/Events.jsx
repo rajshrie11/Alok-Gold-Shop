@@ -1,5 +1,6 @@
 import React from "react";
 import "./Events.css";
+import Footer from "../Footer/Footer";
 
 const Events = () => {
   return (
@@ -7,6 +8,7 @@ const Events = () => {
       <div className="flexCenter banner v-right">
         <span className="">Events</span>
       </div>
+      <Footer />
       <div className="paddings innerWidth flexCenter c-container">
         <img src="./.jpeg" alt="Product1" />
         <img src="./.jpeg" alt="Product2" />

@@ -1,5 +1,6 @@
 import React from "react";
 import "./OnlineClasses.css";
+import Footer from "../Footer/Footer";
 
 const OnlineClasses = () => {
   return (
@@ -7,6 +8,7 @@ const OnlineClasses = () => {
       <div className="flexCenter banner v-right">
         <span className="">Online Classes</span>
       </div>
+      <Footer />
       <div className="paddings innerWidth flexCenter c-container">
         <img src="./.jpeg" alt="Product1" />
         <img src="./.jpeg" alt="Product2" />

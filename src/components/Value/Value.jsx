@@ -1,5 +1,6 @@
 import React from "react";
 import "./Value.css";
+import Footer from "../Footer/Footer";
 
 const Value = () => {
   return (
@@ -7,6 +8,8 @@ const Value = () => {
       <div className="flexCenter banner v-right">
         <span className="">Our Value</span>
       </div>
+      <Footer />
+
       <div className="paddings innerWidth flexCenter v-container">
         {/* left side */}
         <div className="v-left">
