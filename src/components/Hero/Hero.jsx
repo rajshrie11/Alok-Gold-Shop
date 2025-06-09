@@ -1,31 +1,70 @@
-// import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Hero.css";
 import { HiLocationMarker } from "react-icons/hi";
 import { FaArrowCircleUp } from "react-icons/fa";
 import CountUp from "react-countup";
 
-const Hero = () => {
+// Highlight function to wrap matched text
+const highlightText = (text, searchTerm) => {
+  if (!searchTerm) return text;
+  const regex = new RegExp(`(${searchTerm})`, "gi");
+  return text.split(regex).map((part, i) =>
+    part.toLowerCase() === searchTerm.toLowerCase() ? (
+      <span key={i} style={{ backgroundColor: "yellow" }}>
+        {part}
+      </span>
+    ) : (
+      part
+    )
+  );
+};
+
+const Hero = ({ searchTerm }) => {
   return (
     <div>
       <section className="hero-wrapper bgcolor">
-        <div className="paddings innerWidth flexCenter hero-container ">
+        <div className="paddings innerWidth flexCenter hero-container">
           {/* left side */}
           <div className="flexColStart hero-left">
             <div className="hero-title">
-              <h2>New Age Spiritual Moment </h2>
+              <h2>{highlightText("Discover GB Foundation's", searchTerm)}</h2>
               <h1>
-                Discover GB Foundation's New Age Spiritual Moment <br />
+                {highlightText("New Age Spiritual Movement", searchTerm)} <br />
               </h1>
             </div>
             <div className="flexColStart hero-des">
               <span className="secondaryText">
-                Go Within Become Self Controlled, Self reliant
-              </span>
-              <span className="secondaryText">
-                You will find the source of life. That is where God–your pure
-                spirit, your Absolute Understanding is. That is your “Oneness.”
-                If you go far enough within yourself, you will connect with all
-                creation
+                {highlightText(
+                  "New Age Spiritual Movement is all about you and your Awareness,",
+                  searchTerm
+                )}
+                <span className="secondaryText">
+                  {highlightText(
+                    "Its a right platform for you to know more about yourself and to expolre yourself",
+                    searchTerm
+                  )}
+                  <br />
+                  <br />
+                  {highlightText(
+                    "We strongly believe in two aspects:",
+                    searchTerm
+                  )}
+                  <br />
+                  {highlightText(
+                    "• When everything fails your Energy works",
+                    searchTerm
+                  )}
+                  <br />
+                  {highlightText(
+                    "• When nothing works your Energy acts",
+                    searchTerm
+                  )}
+                  <br />
+                  {highlightText(
+                    "Come and join us to know more about yourself.",
+                    searchTerm
+                  )}
+                </span>
               </span>
             </div>
 
@@ -35,7 +74,9 @@ const Hero = () => {
                   <CountUp start={8800} end={9000} duration={4} />
                   <span>+</span>
                 </span>
-                <span className="secondaryText">Premium quality products</span>
+                <span className="secondaryText">
+                  {highlightText("Premium quality products", searchTerm)}
+                </span>
               </div>
 
               <div className="flexColStart stat">
@@ -43,7 +84,9 @@ const Hero = () => {
                   <CountUp start={1990} end={5000} duration={180000} />
                   <span>+</span>
                 </span>
-                <span className="secondaryText">Happy Followers</span>
+                <span className="secondaryText">
+                  {highlightText("Happy Followers", searchTerm)}
+                </span>
               </div>
 
               <div className="flexColStart stat">
@@ -51,7 +94,9 @@ const Hero = () => {
                   <CountUp end={28} />
                   <span>+</span>
                 </span>
-                <span className="secondaryText">Award winning</span>
+                <span className="secondaryText">
+                  {highlightText("Award winning", searchTerm)}
+                </span>
               </div>
             </div>
           </div>
